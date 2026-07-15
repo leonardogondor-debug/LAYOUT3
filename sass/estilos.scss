@@ -1,15 +1,17 @@
-/* === BASE === */
-@use 'base';
-
-/* === COMPONENTES === */
-@use 'componentes';
-
-/* === LAYOUT === */
-@use 'layout';
+/* === VARIAVEIS === */
+@use 'variaveis';
 
 /* === MIXINS === */
 @use 'mixins';
 
-/* === VARIAVEIS === */
-@use 'variaveis';
+/* === BASE === */
+@use 'base';
+
+/* === LAYOUT === */
+@use 'layout';
+
+/* === COMPONENTES === */
+@use 'componentes';
+
+
 
