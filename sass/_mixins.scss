@@ -1,0 +1,58 @@
+/* === VARIAVEIS === */
+@use 'variaveis';
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin grid {
+    display: grid;
+}
+
+@mixin card-base ($cor-borda: $cor-roxa){
+    border: $border-base $cor-borda;
+    box-sizing: border-box;
+    border-radius: $radius-base;
+}
+
+@mixin section-base {
+    flex-direction: column;
+    align-items: center;
+    background-color: $cor-branca;
+    padding: $padding-section;
+    gap: $gap-sm;
+}
+
+@mixin btn-base ($bgc, $color: #15b61d){
+    padding: $padding-sm;
+    background-color: $bgc;
+    color: $color;
+    border-radius: 0.5rem;
+}
+
+@mixin grid-pos($col, $row) {
+    grid-column: $col;
+    grid-row: $row;
+}
+
+@mixin menu-ico {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+
+    &,
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $cor-branca;
+        border-radius: 2px;
+    }
+
+    &::before { top: 4px; }
+    &::after { bottom: 4px; }
+}
