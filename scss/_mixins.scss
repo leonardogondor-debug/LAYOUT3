@@ -1,5 +1,4 @@
-/* === VARIAVEIS === */
-@use 'variaveis';
+@use 'variaveis' as v;
 
 @mixin flex {
     display: flex;
@@ -10,21 +9,21 @@
 }
 
 @mixin card-base ($cor-borda: $cor-roxa){
-    border: $border-base $cor-borda;
+    border: v.$border-base v.$cor-borda;
     box-sizing: border-box;
-    border-radius: $radius-base;
+    border-radius: v.$radius-base;
 }
 
 @mixin section-base {
     flex-direction: column;
     align-items: center;
-    background-color: $cor-branca;
-    padding: $padding-section;
-    gap: $gap-sm;
+    background-color: v.$cor-branca;
+    padding: v.$padding-section;
+    gap: v.$gap-sm;
 }
 
 @mixin btn-base ($bgc, $color: #15b61d){
-    padding: $padding-sm;
+    padding: v.$padding-sm;
     background-color: $bgc;
     color: $color;
     border-radius: 0.5rem;
@@ -49,7 +48,7 @@
         left: 0;
         width: 100%;
         height: 4px;
-        background-color: $cor-branca;
+        background-color: v.$cor-branca;
         border-radius: 2px;
     }
 

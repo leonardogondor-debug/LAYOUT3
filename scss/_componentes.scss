@@ -1,0 +1,6 @@
+@use 'mixins' as m;
+
+section {
+    @include m.flex;
+    @include m.section-base;
+}
