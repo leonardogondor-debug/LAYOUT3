@@ -8,8 +8,8 @@
     display: grid;
 }
 
-@mixin card-base ($cor-borda: $cor-roxa){
-    border: v.$border-base v.$cor-borda;
+@mixin card-base ($cor-borda: v.$cor-roxa){
+    border: v.$border-base $cor-borda;
     box-sizing: border-box;
     border-radius: v.$radius-base;
 }
@@ -35,6 +35,7 @@
 }
 
 @mixin menu-ico {
+    display: none;
     width: 30px;
     height: 30px;
     position: relative;
@@ -54,4 +55,9 @@
 
     &::before { top: 4px; }
     &::after { bottom: 4px; }
+
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+    }
 }

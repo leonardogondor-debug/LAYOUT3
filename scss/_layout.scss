@@ -1,0 +1,34 @@
+@use 'mixins' as m;
+@use 'variaveis' as v;
+
+@media (min-width: 1024px) {
+    .header__menu {
+        @include m.flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        &__menu-ico {
+            display: block;
+        }
+
+        &__menu {
+            display: none;
+            flex-direction: column;
+            gap: 10%;
+            background-color: v.$cor-branca;
+        }
+
+        &__checkbox:checked ~ &__menu {
+            @include m.flex;
+        }
+
+        &__menu-link {
+            display: block;
+            padding: v.$padding-section;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+    }
+}
