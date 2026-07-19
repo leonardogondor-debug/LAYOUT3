@@ -2,21 +2,19 @@
 @use 'variaveis' as v;
 
 .header {
-    @include m.flex;
+    @include m.flex-column;
     background-color: v.$cor-roxa;
     color: v.$cor-branca;
-    flex-direction: column;
 }
 
 .layout__main {
-    @include m.flex;
-    flex-direction: column;
+    @include m.flex-column;
     padding: v.$padding-main;
     gap: v.$gap-md;
 }
 
 .section {
-    @include m.flex;
+    @include m.flex-column;
     @include m.section-base;
     @include m.card-base
 }

@@ -10,9 +10,9 @@
 
 .header {
   display: flex;
+  flex-direction: column;
   background-color: #580b8b;
   color: #fff;
-  flex-direction: column;
 }
 
 .layout__main {
@@ -101,6 +101,7 @@
   }
   .header__checkbox:checked ~ .header__menu {
     display: flex;
+    flex-direction: column;
   }
   .header__menu-link {
     display: block;

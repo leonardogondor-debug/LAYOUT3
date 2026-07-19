@@ -14,7 +14,7 @@
         }
 
         .header__checkbox:checked ~ .header__menu {
-            @include m.flex;
+            @include m.flex-column;
         }
 
         .header__menu-link {
@@ -28,7 +28,6 @@
 
 @media (min-width: v.$bp-desktop) {
     .header__menu {
-        @include m.flex;
-        flex-direction: row;
+        @include m.flex-row;
     }
 }

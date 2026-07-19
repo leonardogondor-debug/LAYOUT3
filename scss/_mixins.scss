@@ -1,7 +1,13 @@
 @use 'variaveis' as v;
 
-@mixin flex {
+@mixin flex-column {
     display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
 }
 
 @mixin grid {
@@ -15,7 +21,6 @@
 }
 
 @mixin section-base {
-    flex-direction: column;
     align-items: center;
     background-color: v.$cor-branca;
     padding: v.$padding-section;
