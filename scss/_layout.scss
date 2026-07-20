@@ -26,6 +26,18 @@
     
 }
 
+@media (min-width:v.$bp-tablet-min) and (max-width:v.$bp-tablet-max) {
+    .header__menu {
+        @include m.flex;
+        justify-content: space-around;
+        background-color: v.$cor-roxa;
+    }
+
+    .header__menu-ico {
+        display: none;
+    }
+}
+
 @media (min-width: v.$bp-desktop) {
     .header__menu {
         @include m.flex-row;

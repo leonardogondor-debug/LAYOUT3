@@ -16,7 +16,7 @@
 .section {
     @include m.flex-column;
     @include m.section-base;
-    @include m.card-base
+    @include m.card-base;
 }
 
 .header {
@@ -55,4 +55,82 @@
     flex-direction: column;
     padding: v.$padding-sm;
     
+}
+
+.servicos {
+    @include m.grid (repeat(3, 1fr), auto);
+    gap: v.$gap-sm;
+
+    &__titulo {
+        text-align: v.$t-center;
+        @include m.grid-pos (2, 1);
+        gap: v.$gap-md;
+    }
+
+    &__subtitulo {
+        @include m.grid-pos(#{1 / -1});
+        max-width: v.$max-wid;
+        margin: (v.$margin-sm - 1) auto;
+    }
+    
+    &__design {
+        @include m.texcent;
+        @include m.card-base;
+        @include m.grid-pos(2, 3);
+        padding: calc(v.$padding-b + 3.5%);
+    }
+
+    &__desenvolvimento {
+        @include m.texcent;
+        @include m.card-base;
+        @include m.grid-pos(3, 3);
+        padding: calc(v.$padding-b + 0.5%);
+    }
+
+    &__branding {
+        @include m.texcent;
+        @include m.card-base;
+        @include m.grid-pos(1, 3);
+        padding: calc(v.$padding-b + 0.5%);
+    }
+    
+}
+
+.depoimentos {
+    &__item {
+        padding: v.$padding-card;
+        margin-bottom: v.$margin-sm;
+        @include m.card-base;
+        @include m.texcent;
+    }
+}
+
+.contatos {
+    text-align: v.$t-center;
+    @include m.flex-column;
+    gap: v.$gap-sm;
+}
+
+.form {
+    @include m.flex-column;
+    gap: calc(v.$gap-sm - 0.7rem);
+    padding: v.$padding-b;
+
+    &--fundo-roxo {
+        background-color: v.$cor-roxa;
+        @include m.card-base;
+    }
+
+    &__input {
+        padding: v.$padding-sm;
+    }
+
+    &__textarea {
+        padding: v.$padding-md;
+        margin-bottom: v.$margin-sm;
+    }
+
+    &__btn {
+        @include m.btn-base;
+    }
 }

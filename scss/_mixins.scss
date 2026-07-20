@@ -10,8 +10,22 @@
     flex-direction: row;
 }
 
-@mixin grid {
+@mixin flex {
+    display: flex;
+}
+
+@mixin grid($co, $ro) {
     display: grid;
+    grid-template-columns: $co;
+    grid-template-rows: $ro;
+}
+
+@mixin grid-pos($col, $row: null) {
+    grid-column: $col;
+
+    @if $row != null {
+        grid-row: $row;
+    }
 }
 
 @mixin card-base ($cor-borda: v.$cor-roxa){
@@ -29,14 +43,9 @@
 
 @mixin btn-base ($bgc, $color: #15b61d){
     padding: v.$padding-sm;
-    background-color: $bgc;
-    color: $color;
+    background-color: v.$bgc;
+    color: v.$color;
     border-radius: 0.5rem;
-}
-
-@mixin grid-pos($col, $row) {
-    grid-column: $col;
-    grid-row: $row;
 }
 
 @mixin menu-ico {
@@ -61,4 +70,11 @@
     &::before { top: 4px; }
     .header__menu--linhas { top: 13px;}
     &::after { bottom: 4px; }
+}
+
+@mixin texcent {
+    h3 {
+        text-align: center;
+        padding-bottom: v.$padding-sm;
+    }
 }
