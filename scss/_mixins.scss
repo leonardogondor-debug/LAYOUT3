@@ -1,17 +1,14 @@
 @use 'variaveis' as v;
 
-@mixin flex-column {
+@mixin flex($direction: column) {
     display: flex;
-    flex-direction: column;
+    flex-direction: $direction;
 }
 
-@mixin flex-row {
+@mixin flex-jus($content: space-between) {
     display: flex;
-    flex-direction: row;
-}
-
-@mixin flex {
-    display: flex;
+    justify-content: $content;
+    flex-wrap: wrap;
 }
 
 @mixin grid($co, $ro) {
@@ -41,11 +38,19 @@
     gap: v.$gap-sm;
 }
 
-@mixin btn-base ($bgc, $color: #15b61d){
+@mixin btn-base ( $color, $hover, $active, $bgc: #15b61d){
     padding: v.$padding-sm;
-    background-color: v.$bgc;
-    color: v.$color;
+    background-color: $bgc;
+    color: $color;
     border-radius: 0.5rem;
+
+    &:hover {
+        background-color: $hover;
+    }
+
+    &:active {
+        background-color: $active;
+    }
 }
 
 @mixin menu-ico {
